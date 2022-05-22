@@ -1,0 +1,934 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    font-family: 'Poppins',
+        sans-serif;
+}
+
+a {
+    color: rgb(17, 20, 54);
+    text-decoration: none;
+}
+
+.container {
+    font-family: 'Poppins',
+        sans-serif;
+    box-sizing: border-box;
+    padding: 0 5rem;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 5rem;
+    left: 5rem;
+    font-family: 'Poppins',
+        sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    transition: all .5s ease-in-out;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.title {
+    color: rgb(17, 20, 54);
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.hamburger {
+    display: none;
+}
+
+.hamburger span,
+.hamburger span::after,
+.hamburger span::before {
+    display: block;
+    width: .5rem;
+    height: .5rem;
+    background-color: rgb(255, 230, 0);
+    border-radius: 100%;
+    margin: 0 3rem;
+}
+
+
+.hamburger span::after {
+    margin: -.5rem 2rem;
+    background-color: rgb(235, 81, 10);
+}
+
+.hamburger span::before {
+    margin: 0 1rem;
+    background-color: rgb(26, 54, 194);
+    ;
+}
+
+.hamburger span::after,
+.hamburger span::before {
+    content: '';
+}
+
+.navbar>.nav-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar .nav-item li a,
+.navbar .nav-item li button {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.1s ease-in-out;
+}
+
+.login {
+    border: none;
+    background-color: transparent;
+}
+
+.sign {
+    background-color: transparent;
+    padding: .4rem;
+    border-radius: .3rem;
+    box-sizing: border-box;
+    border: 2px solid #272624;
+}
+
+.sign:hover {
+    background-color: #ffc107;
+    color: #fff;
+    border: 2px solid #ffc107;
+}
+
+.login:hover,
+.sign:hover {
+    cursor: pointer;
+}
+
+.navbar .nav-item li a:hover,
+.login:hover {
+    color: rgb(255, 193, 7);
+}
+
+.navbar .nav-item li a:active,
+.sign:active,
+.login:active,
+.find:active,
+.demo:active {
+    transform: scale(.5);
+}
+
+.section-wrapper {
+    margin: 4rem 0;
+}
+
+.section-wrapper.one,
+.section-wrapper.four,
+.about-us {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+.section-wrapper.one .left h3,
+.section-wrapper.four .left>p,
+.about-us .left>p {
+    color: red;
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 1rem;
+}
+
+.section-wrapper.four .left>p,
+.about-us .left>p {
+    color: rgb(53, 67, 227);
+}
+
+.section-wrapper.one .left h1,
+.section-wrapper.four .left h1,
+.about-us .left h1 {
+    width: 80%;
+    color: rgb(17, 20, 54);
+    font-weight: 900;
+    font-size: 4rem;
+}
+
+.section-wrapper.four .left h1,
+.about-us .left h1 {
+    font-size: 3.5rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.section-wrapper.one .left p {
+    color: rgb(86, 86, 86);
+    font-weight: 400;
+    font-size: 19px;
+    margin: 3rem 0;
+    line-height: 1.6rem;
+}
+
+.section-wrapper.one div {
+    display: flex;
+}
+
+.find,
+.demo {
+    background-color: rgb(255, 193, 7);
+    border: none;
+    text-align: center;
+    box-sizing: border-box;
+    padding: .5rem;
+    border-radius: .5rem;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    border: .1rem solid rgb(255, 193, 7)
+}
+
+.find:hover {
+    background-color: #fff;
+    color: #000;
+    border: .1rem solid #000000;
+}
+
+.demo {
+    background-color: transparent;
+    color: rgb(17, 20, 54);
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 9rem;
+    border: none;
+    transition: all 0.1s ease-in-out;
+}
+
+.demo:hover {
+    background-color: rgb(235, 235, 235);
+    color: rgb(17, 20, 54);
+}
+
+.demo span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    box-sizing: border-box;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.demo span::after {
+    content: '';
+    display: block;
+    height: 0px;
+    width: 0px;
+    border-bottom: solid 10px #fff;
+    border-left: solid 8px transparent;
+    border-right: solid 8px transparent;
+    transform: rotate(90deg);
+    margin-left: .2rem;
+}
+
+.section-wrapper.one img {
+    display: block;
+    background-color: rgb(255, 193, 7);
+    object-fit: cover;
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: 100%;
+    width: 50%;
+}
+
+.svg-category {
+    width: 10rem;
+    background-color: rgba(253, 250, 241, 0.71);
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: .5rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: rgb(255, 193, 7);
+}
+
+.section-wrapper.two>p,
+.section-wrapper.three>p {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(72, 74, 91);
+}
+
+.section-wrapper.two h1,
+.section-wrapper.three h1,
+.subscribe h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 2rem;
+    color: rgb(17, 20, 54);
+}
+
+.category-list,
+.destinations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.category {
+    width: 15rem;
+    height: 20rem;
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+.category-list .category:hover,
+.destinations-list:hover {
+    transform: scale(1.1);
+}
+
+.category-list .category h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    color: rgb(17, 20, 54);
+}
+
+.category-list .category p,
+.destinations-list p,
+.destinations-list section p {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(86, 86, 86);
+}
+
+.svg-destinations {
+    width: .7rem;
+    margin-right: .5rem;
+    cursor: pointer;
+}
+
+.destinations {
+    margin: auto;
+    padding: 0;
+}
+
+.destinations-list img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.destinations-list {
+    width: 25rem;
+    height: 25rem;
+    margin: 1rem;
+    box-sizing: border-box;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    padding-bottom: 1rem;
+    transition: all 0.1s ease-in-out;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.destinations-list section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.destinations-list>p {
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.right {
+    width: 40%;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.right img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.steps {
+    display: flex;
+    margin: 1rem 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.steps div {
+    width: 85%;
+}
+
+.steps h3,
+.right h2,
+.going h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(17, 20, 54);
+    margin-bottom: .5rem;
+}
+
+.going h3 {
+    margin: .5rem 0;
+}
+
+.right h2 {
+    margin: 1rem 0;
+}
+
+.about-us .right h2 {
+    margin: 1.5rem 0 0 0;
+}
+
+.steps p,
+.right p,
+.going p {
+    font-size: .9rem;
+    font-weight: 400;
+    color: rgb(146, 147, 154);
+}
+
+.svg-steps {
+    width: 3rem;
+    background-color: rgb(255, 193, 7);
+    fill: #fff;
+    box-sizing: content-box;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+.icon {
+    margin: 1rem 0;
+}
+
+.icon .svg-destinations {
+    background-color: rgb(221, 221, 221);
+    box-sizing: content-box;
+    border-radius: 100%;
+    padding: .5rem;
+    fill: rgb(70, 70, 74);
+}
+
+.love {
+    width: 1rem;
+    margin-left: 10rem;
+    fill: rgb(78, 69, 216);
+}
+
+.on {
+    background-color: #fff;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    width: 18rem;
+    top: 146rem;
+    right: 6rem;
+    display: flex;
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.on img {
+    border-radius: 100%;
+    width: 20%;
+    height: 40px;
+    object-fit: cover;
+}
+
+.going {
+    margin-left: 1rem;
+    width: 100%;
+}
+
+.percentage {
+    color: rgb(50, 50, 210);
+}
+
+.bar {
+    background-color: rgb(241, 238, 238);
+    width: 100%;
+    height: .5rem;
+    border-radius: 1rem;
+    margin-top: .5rem;
+}
+
+.in-bar {
+    width: 40%;
+    height: 100%;
+    background-color: rgb(214, 94, 237);
+    border-radius: 1rem;
+}
+
+.about-us span {
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(154, 154, 155);
+    border-radius: 100%;
+    margin-top: 5rem;
+    margin-left: 5rem;
+    cursor: pointer;
+}
+
+.about-us span::before,
+.about-us span::after {
+    content: "";
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+}
+
+.about-us span::after {
+    background-color: rgb(154, 154, 155);
+    margin-top: -1rem;
+    margin-left: 5rem;
+}
+
+.about-us span::before {
+    background-color: rgb(19, 20, 79);
+    margin-left: -5rem;
+}
+
+.about-us .right {
+    padding: 1rem 1.5rem;
+    background-color: #fff;
+}
+
+.right p {
+    line-height: 1.5rem;
+    width: 90%;
+}
+
+.about-us .right .about-img {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    top: 182rem;
+    right: 34.5rem;
+}
+
+.right.two {
+    width: 35%;
+    position: absolute;
+    background-color: #fff;
+    right: 5rem;
+    top: 188rem;
+    z-index: -1;
+}
+
+.arrow-navigate {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    right: -4rem;
+    top: -1rem;
+}
+
+.arrow-navigate .svg-destinations {
+    width: 1rem;
+}
+
+.arrow-navigate .svg-destinations.up {
+    fill: rgb(158, 158, 159);
+}
+
+.logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 5rem;
+}
+
+.logo img {
+    width: 10rem;
+}
+
+.subscribe {
+    background-color: rgb(228, 161, 224);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    height: 20rem;
+    margin: 5rem 0;
+    border-top-left-radius: 6rem;
+}
+
+.subscribe h2 {
+    line-height: 3rem;
+    width: 80%;
+    color: rgb(70, 75, 94);
+}
+
+.subscribe form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.subscribe form input[type="email"] {
+    width: 70%;
+    height: 2rem;
+    border: none;
+    border-radius: .5rem;
+    padding: .5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(72, 73, 77);
+    outline: none;
+}
+
+.subscribe form button {
+    width: 20%;
+    height: 3rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: rgb(235, 81, 10);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.subscribe form button:hover {
+    background-color: rgb(255, 193, 7);
+}
+
+.subscribe form button:active {
+    transform: scale(.5);
+}
+
+.paper-plane {
+    background-color: rgb(58, 58, 216);
+    width: 5rem;
+    height: 5rem;
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: 100%;
+    position: absolute;
+    right: 4rem;
+    top: 217rem;
+}
+
+.paper-plane {
+    fill: #fff;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .sosmed {
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.sosmed section:not(:last-child) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.sosmed section:last-child {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 2rem;
+}
+
+.sosmed section:last-child img {
+    width: 5rem;
+    cursor: pointer;
+}
+
+.sosmed section:last-child img:last-child {
+    width: 7rem;
+}
+
+.sosmed p {
+    text-align: center;
+}
+
+.svg-sosmed {
+    width: 1rem;
+    fill: rgb(70, 70, 74);
+    cursor: pointer;
+}
+
+.footer div h2 {
+    color: rgb(14, 28, 57);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: .5rem 0;
+}
+
+.footer div .nav-item li {
+    list-style: none;
+    margin: .5rem 0;
+}
+
+.footer div p {
+    width: 16rem;
+}
+
+footer>p {
+    margin-top: 2.5rem;
+    text-align: center;
+    color: rgb(88, 87, 87);
+}
+
+@media (max-width:576px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .navbar {
+        right: .5rem;
+        left: .5rem;
+        z-index: 2;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 3;
+    }
+
+    .navbar .nav-item {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: rgb(20, 19, 19);
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 2;
+    }
+
+    .navbar .nav-item li a,
+    .navbar .nav-item li button {
+        color: rgb(240, 238, 238);
+    }
+
+    .sign {
+        border: 2px solid rgb(147, 147, 146);
+    }
+
+    .nav-item.open {
+        display: flex;
+    }
+
+    .login {
+        position: absolute;
+        left: 5rem;
+        bottom: 6.5rem;
+    }
+
+    .sign {
+        position: absolute;
+        right: 5rem;
+        bottom: 6rem;
+    }
+
+    .section-wrapper.one,
+    .section-wrapper.four,
+    .about-us {
+        width: 100vw;
+        height: 100%;
+        display: block;
+    }
+
+    .section-wrapper.one .left,
+    .section-wrapper.four .left {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section-wrapper.one .left h1,
+    .section-wrapper.four .left {
+        width: 100%;
+    }
+
+    .section-wrapper.one img {
+        width: 50%;
+        position: absolute;
+        right: 0;
+        top: 10rem;
+        z-index: -1;
+    }
+
+    .category-list {
+        overflow-y: auto;
+    }
+
+    .destinations {
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    .category {
+        margin: 0 .5rem;
+        background-color: #fff;
+    }
+
+
+    .steps div {
+        background-color: #fff;
+        width: 80%;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .on {
+        top: 220rem;
+        right: 0;
+    }
+
+    .about-us .right {
+        margin-top: 2rem;
+    }
+
+    .about-us span {
+        margin-top: 1rem;
+        margin-left: 15rem;
+    }
+
+    .right.two {
+        top: 262rem;
+        width: 100%;
+        right: 0;
+        z-index: 1;
+    }
+
+    .arrow-navigate {
+        right: 1rem;
+    }
+
+    .about-us .right .about-img {
+        left: -1rem;
+        top: 258rem;
+    }
+
+    .logo {
+        margin-top: 8rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo img {
+        padding: 0 .5rem;
+    }
+
+    .paper-plane {
+        top: 293rem;
+        right: -1rem;
+    }
+
+    .subscribe {
+        margin-top: 10rem;
+    }
+
+    .subscribe h2 {
+        width: 95%;
+        line-height: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .subscribe form {
+        width: 95%;
+    }
+
+    .subscribe form input[type="email"] {
+        width: 60%;
+    }
+
+    .subscribe form button {
+        width: 30%;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+    }
+
+    .footer div {
+        margin: 1rem;
+    }
+}
